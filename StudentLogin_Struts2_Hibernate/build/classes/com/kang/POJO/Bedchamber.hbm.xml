@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.kang.POJO.Bedchamber" table="Bedchamber">
+    <id name="bedchamberId" type="integer" column="BedchamberId">
+    	<generator class="native"/>
+    </id>	
+    <property name="bedchamberName" type="text" column="BedchamberName"/>
+    <list name="studentList" inverse="true" cascade="all">
+    	<key column="BedchamberId"/>
+    	<index column="StudentId"/>
+    	<one-to-many class="com.kang.POJO.Student"/>
+    </list>
+</class>
+</hibernate-mapping>

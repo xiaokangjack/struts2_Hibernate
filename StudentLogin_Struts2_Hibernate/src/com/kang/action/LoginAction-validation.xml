@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="adminusername">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message><![CDATA[需要输入用户名]]></message>
+		</field-validator>
+	</field>
+	<field name="adminuserpassword">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message><![CDATA[需要输入密码]]></message>
+		</field-validator>
+	</field>
+</validators>

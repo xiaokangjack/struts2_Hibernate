@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.kang.POJO.Student" table="Student">
+    <id name="studentId" type="long" column="StudentId">
+    	<generator class="native"/>
+    </id>		
+    <property name="studentName" type="text" column="StudentName" not-null="true"/>
+    <property name="matriNo" type="text" column="MatriNo"/>
+    <property name="payAmount" type="float" column="PayAmount" />
+    <property name="payOK" type="integer" column="PayOK"/>
+    <property name="registDate" type="date" column="RegistDate"/>
+    <many-to-one name="classTa" column="classId" class="com.kang.POJO.ClassTa" outer-join="false"/>
+    <many-to-one name="speciality" column="SpecialityId" class="com.kang.POJO.Speciality"/>
+    <many-to-one name="bedchamber" column="BedchamberId" class="com.kang.POJO.Bedchamber"/>
+</class>
+</hibernate-mapping>

@@ -1,11 +1,11 @@
-<%@ page contentType="text/html;charset=GBK" %>
+﻿<%@ page contentType="text/html;charset=GBK" %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <s:if test="#session.adminusername==null">
 	<%response.sendRedirect("login.jsp");%>
 </s:if>
 <html>
 <head>
-<title>��������ϵͳ</title>
+<title>报到管理系统</title>
 </head>
 <frameset framespacing="0" border="0" frameborder="0" rows="64,*" marginwidth="0" marginheight="0">
   <frame name="banner" scrolling="no" noresize target="contents" src="banner.html">

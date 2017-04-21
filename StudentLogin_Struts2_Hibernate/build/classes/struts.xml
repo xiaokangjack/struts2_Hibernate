@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+    <package name="HibernateLoginProject" namespace="" extends="struts-default">
+    	<!-- ==== 用户登录功能 ==== -->
+        <action name="Login" class="com.kang.action.LoginAction">
+            <result>/index.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <!-- ==== 基础数据管理模块 ==== -->
+        <action name="RegStatus" class="com.kang.action.RegStatusAction">
+            <result>/basicdata/regstatus.jsp</result>
+        </action>
+        <action name="AdminUser" class="com.kang.action.AdminUserAction">
+            <result>/basicdata/adminuser.jsp</result>
+        </action>
+        <action name="Bedchamber" class="com.kang.action.BedchamberAction">
+            <result>/basicdata/bedchamber.jsp</result>
+        </action>
+        <action name="Class" class="com.kang.action.ClassAction">
+            <result>/basicdata/class.jsp</result>
+        </action>
+        <action name="Speciality" class="com.kang.action.SpecialityAction">
+            <result>/basicdata/specialityadmin.jsp</result>
+        </action>
+        <action name="Matri" class="com.kang.action.MatriAction">
+            <result>/basicdata/matri.jsp</result>
+        </action>
+        <!-- ==== 报到分班管理模块 ==== -->
+        <action name="ClassAdmin" class="com.kang.action.ClassAdminAction">
+            <result>/class/classadmin.jsp</result>
+            <result name="input">/class/classadmin.jsp</result>
+        </action>
+        <action name="ClassView" class="com.kang.action.ClassViewAction">
+            <result>/class/classview.jsp</result>
+        </action>
+        <!-- ==== 收费管理模块 ==== -->
+        <action name="AcceptMoney" class="com.kang.action.AcceptMoneyAction">
+            <result>/money/acceptmoney.jsp</result>
+        </action>
+        <!-- ==== 宿舍分配管理模块 ==== -->
+        <action name="Bed" class="com.kang.action.BedAction">
+            <result>/bed/bedchamber.jsp</result>
+        </action>
+    </package>
+</struts>

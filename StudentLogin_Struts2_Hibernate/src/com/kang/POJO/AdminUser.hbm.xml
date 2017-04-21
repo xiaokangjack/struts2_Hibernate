@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.kang.POJO.AdminUser" table="adminuser">
+    <id name="adminUserName" type="text"
+        column="adminusername"/>		
+    <property name="adminUserPassword" type="text"
+        column="adminuserpassword" />
+    <property name="adminUserRole" type="integer"
+        column="adminuserrole"/>
+</class>
+</hibernate-mapping>
